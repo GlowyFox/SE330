@@ -68,7 +68,7 @@ public class SLList {
     //Finds the first instance of the given info.
     public Object findFirst(Object toFind){
         seek = head;
-        for( ; seek != null && !toFind.equals(seek.info); seek = seek.next);
+        for( ; seek != null && !toFind.equals(seek.info); seek = seek.next){}
         if(seek == null){
             return null;
         }
@@ -100,7 +100,7 @@ public class SLList {
                 SLLNode prevNode = head; 
                 seek = head.next;
                 for(; seek != null && !(seek.info.equals(toRemove)); 
-                        prevNode = prevNode.next, seek = seek.next);
+                        prevNode = prevNode.next, seek = seek.next){}
                 if(seek != null){
                     //This still feels so wrong..
                     prevNode.next = seek.next;
@@ -134,7 +134,7 @@ public class SLList {
                 SLLNode prevNode = head; 
                 seek = head.next;
                 for(int count = 1; seek != null && count != index; 
-                        prevNode = prevNode.next, seek = seek.next);
+                        prevNode = prevNode.next, seek = seek.next){}
                 if(seek != null){
                     //This still feels so wrong..
                     prevNode.next = seek.next;                    
@@ -155,7 +155,7 @@ public class SLList {
                 SLLNode prevNode = head; 
                 seek = head.next;
                 for(int count = 1; seek != null && count != index; 
-                        prevNode = prevNode.next, seek = seek.next);
+                        prevNode = prevNode.next, seek = seek.next){}
                 
                                 
                 prevNode.next =  new SLLNode(data, seek); 
@@ -177,7 +177,7 @@ public class SLList {
                 SLLNode prevNode = head; 
                 seek = head.next;
                 for(int count = 1; seek != null && count != index+1; 
-                        prevNode = prevNode.next, seek = seek.next);
+                        prevNode = prevNode.next, seek = seek.next){}
                 
                                     
                 prevNode.next = new SLLNode(data, seek);
